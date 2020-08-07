@@ -28,7 +28,6 @@
          $this->open('search.db');
       }
    }
-   
    $db = new MyDB();
    if(!$db) {
       echo $db->lastErrorMsg();
@@ -38,7 +37,6 @@
    $sql =<<<EOF
       SELECT * from search;
 EOF;
-
    $res = $db->query($sql);
    while($row = $res->fetchArray(SQLITE3_ASSOC) ) {
       echo $trs ;
@@ -51,9 +49,6 @@ EOF;
    echo "Operation done successfully\n";
    $db->close();
 ?>
-
-
-
 </table>
 </body>
 </html>
